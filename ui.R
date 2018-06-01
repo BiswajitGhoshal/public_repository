@@ -38,7 +38,7 @@ shinyUI(
                   
                       tabPanel("Overview",
                                h4(p("Data input")),
-                               p("This app supports only text (.txt) data file. The .txt data file should have no other language than plain English language characters.",align="justify"),
+                               p("This app supports only text (.txt) data file. The .txt data file should have no other language than plain English language characters. Also, if you are running it from RStudio, it would require the English udpipe file, english-ud-2.0-170801.udpipe to be in the default folder. However, if you are running it from Github, using runGitHub(), the udpipe-file would be taken from the repository.",align="justify"),
                                p("Please refer to the link below for a sample text file."),
                                a(href="https://raw.githubusercontent.com/sudhir-voleti/sample-data-sets/master/text%20analysis%20data/amazon%20nokia%20lumia%20reviews.txt"
                                  ,"Sample text data input file"),   
