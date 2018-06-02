@@ -47,7 +47,7 @@ shinyUI(
                                p('To use this app, click on the "Browse..." button under', 
                                  span(strong("Upload plain-text (.txt) data")),
                                  'and select and uppload the data file. After file-uploading is done, click on any of the 3 other tabs to see the result. Based on the file-size, it may take 1 or 2 minutes to generate the output in the tab.'),
-                               p('The ', span(strong("Annotated Doc")), ' tab will display the first 100 rows of the annotated document produced by UDPipe from the uploaded text-file.  From the bottom of that tab, you can also', span(strong("download")), ' the entire annotated doc as a .csv file onto your local machine.'),
+                               p('The ', span(strong("Annotated Doc")), ' tab will display the first 100 rows of the annotated document produced by UDPipe from the uploaded text-file.  From the bottom of that tab, you can also', span(strong("download")), ' the entire annotated doc as a CSV file (with a file-name given by you) onto your local machine.'),
                                p('The ', span(strong("Wordclouds")), ' tab gives the wordclouds of the Nouns and verbs of the uploaded text document.'),
                                p('While checking the ',span(strong("N/w plot")), ' You can also change the default option settings in the', span(strong("Checkbox group")), ' for UPOS (Universal parts-of-speech) tags, based on which the co-occurrences plot would change and get updated.')),
 

@@ -6,14 +6,15 @@ shinyServer(function(input, output) {
   require(stringr)  
   Dataset <- reactive({
     if (is.null(input$file1)) {   # locate 'file1' from ui.R
-
                   return(NULL) } else {
-
-      Data1 <- readLines(input$file1$datapath)
-      Data1 =  str_replace_all(Data1, "<.*?>", "") # get rid of junk characters
-      english_model = udpipe_load_model("./english-ud-2.0-170801.udpipe")  # english_model only needed
-      x <- udpipe_annotate(english_model, x = Data1) %>% as.data.frame()
-      x$sentence <- NULL
+      print("Starting Annotation")
+      print(system.time ({
+        Data1 <- readLines(input$file1$datapath)
+        Data1 =  str_replace_all(Data1, "<.*?>", "") # get rid of junk characters
+        english_model = udpipe_load_model("./english-ud-2.0-170801.udpipe")  # english_model only needed
+        x <- udpipe_annotate(english_model, x = Data1) %>% as.data.frame()
+        x$sentence <- NULL
+      }))
       print("Annotation done")
       return(x)
     }
